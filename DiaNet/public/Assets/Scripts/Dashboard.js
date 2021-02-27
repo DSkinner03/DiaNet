@@ -1,11 +1,7 @@
-function Check(){
-  var user = firebase.auth().currentUser;
+var user = firebase.auth().currentUser;
 var name, email, photoUrl, uid, emailVerified;
 
-  firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    if (user != null) {
+if (user != null) {
   name = user.displayName;
   email = user.email;
   photoUrl = user.photoURL;
@@ -15,11 +11,7 @@ var name, email, photoUrl, uid, emailVerified;
                    // you have one. Use User.getToken() instead.
 }
 
-alert(`Welcome ${user.displayName} , \n You are successfully signed into the beta of DiaNet.`)
-  } else {
-    // No user is signed in.
-    alert("You are not signed into DiaNet, please note that this service requires a valid login.")
-    window.location.href = "https://dia-net.web.app"
-  }
-});
-}
+document.getElementById('user_email').innerHTML = user.email
+document.getElementById('user_name').innerHTML = user.displayName
+document.getElementById('user_Verified').innerHTML = user.emailVerified
+document.getElementById('user_uid').innerHTML = user.uid

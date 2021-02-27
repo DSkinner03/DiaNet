@@ -14,8 +14,15 @@ p{
 
 #UsefulLinks{
   border: inset;
-  width: 500px;
-  height: 400px;}
+  width: 300px;
+  height: 200px;
+}
+#Profile{
+  border: inset;
+  float: right;
+  width: 300px;
+  height: 200px
+}
 
 /* Navbar container */
 .navbar {
