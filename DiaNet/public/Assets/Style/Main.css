@@ -27,7 +27,8 @@ button{
  border: 1.25px solid rgba(0, 0, 0, 0.425);
  text-indent: 10px;
 font-size: 17px;
-color: #578AD6;
+background-color: #578AD6;
+color: #302E2E;
 }
 body{
   text-align: center;
