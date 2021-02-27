@@ -2,12 +2,12 @@
 
 ## Supported Versions
 
-We currently only support the Alpha and Beta testing sites 
+We currently only support the Alpha and Beta testing sites
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.0   | :white_check_mark: |
-| <0.1.0   | :x: |
+| 0.0.0   | :white_check_mark: |
+| 0.0.1   | :white_check_mark:                |
 
 
 ## Reporting a Vulnerability
