@@ -6,12 +6,23 @@
       <script src="/Assets/Scripts/Dashboard.js"></script>
       <link rel="stylesheet" href="/Assets/Style/drop.css">
     <title>Dashboard - DiaNet</title>
+    <script type="text/javascript">
+      authStateListener()
+    </script>
   </head>
   <body>
     <div class="navbar">
   <a href="#home">Dashboard</a>
   <a href="#news">Hub</a>
-  <a href="#news">Support</a>
+  <div class="dropdown">
+    <button class="dropbtn">Support
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://tawk.to/chat/60394a3f1c1c2a130d62df1e/1evfsk2d7">Contact Support</a>
+      <a href="#">Request Account Deletion</a>
+    </div>
+  </div>
 
   <div class="dropdown">
     <button class="dropbtn">Manage
@@ -23,6 +34,7 @@
       <a href="#">Manage Dashboard</a>
     </div>
   </div>
+  <button onclick="LogOut()">Log Out</button>
 </div>
 
 <h1>DiaNet Dashboard</h1>
