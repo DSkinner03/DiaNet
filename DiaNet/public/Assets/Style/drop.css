@@ -14,8 +14,8 @@ p{
 
 #UsefulLinks{
   border: inset;
-  
-}
+  width: 500px;
+  height: 400px;}
 
 /* Navbar container */
 .navbar {
