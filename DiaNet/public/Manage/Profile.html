@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+ <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+ <script src="/__/firebase/8.2.2/firebase-app.js"></script>
+
+ <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+ <script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+
+ <!-- Add Firebase products that you want to use -->
+ <script src="/__/firebase/8.2.2/firebase-auth.js"></script>
+ <script src="/__/firebase/8.2.2/firebase-firestore.js"></script>
+
+  <!-- Previously loaded Firebase SDKs -->
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="/Assets/Scripts/auth.js"></script>
+       <script src="/Assets/Scripts/Dashboard.js"></script>
+       <link rel="stylesheet" href="/Assets/Style/drop.css">
+       <script type="text/javascript">
+         window.onload = function(){
+           var user = firebase.auth().currentUser;
+var credential;
+
+// Prompt the user to re-provide their sign-in credentials
+var fb_emailed = prompt("Please enter your email address.");
+var fb_password = prompt("Please enter your password.");
+
+user.reauthenticateWithCredential(credential).then(function() {
+  // User re-authenticated.
+  alert("successfully re-authenticated.")
+}).catch(function(error) {
+  // An error happened.
+  alert("Error, please contact support.")
+});
+         }
+       </script>
+     <title>Manage Profile - DiaNet</title>
+     <script type="text/javascript">
+       authStateListener()
+     </script>
+   </head>
+   <body>
+     <div class="navbar">
+   <a href="https://dia-net.web.app/dashboard.html">Dashboard</a>
+   <a href="/hub.html">Hub</a>
+   <div class="dropdown">
+     <button class="dropbtn">Support
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+       <a href="https://tawk.to/chat/60394a3f1c1c2a130d62df1e/1evfsk2d7">Contact Support</a>
+       <a href="/AccDel.html">Request Account Deletion</a>
+       <a href="https://forms.gle/kmFGm7S46Y9dCTdB9">Bug Report Form</a>
+       <a href="https://forms.gle/m1ovqeQLB7bHX4Fs8">Give us ideas for inspirational messages</a>
+     </div>
+   </div>
+
+   <div class="dropdown">
+     <button class="dropbtn">Manage
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+       <a href="https://dia-net.web.app/Manage/Profile.html">Manage Profile</a>
+     </div>
+   </div>
+   <a onclick="LogOut()">Log Out</a>
+ </div>
+   </head>
+   <body>
+<h1>DiaNet Manage Profile</h1>
+<br>
+<br>
+<h2>Name</h2>
+<input type="text" placeholder="Wilford Brimley" id="fb_name"></input>
+<input type="button" onclick="ChangeName()" value="Change Name"></input>
+<br>
+<br>
+<h2>Password</h2>
+<input type="password" placeholder="Password" id="fb_pass"></input>
+<input type="button" onclick="ChangePass()" value="Change Password"></input>
+   </body>
+ </html>
