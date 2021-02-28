@@ -1,50 +1,77 @@
-var email = document.getElementById('fb_email').value
-var password = document.getElementById('fb_password').value
 
-function LogMeIn(){
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in
-      window.location.href="/dashboard.html"
-      var user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(`${errorCode} \n ${errorMessage}`)
+var emailAddress = email
+var message = document.getElementById('message')
+
+function Login(){
+  var email = document.getElementById('fb_email').value;
+  var password = document.getElementById('fb_pass').value;
+firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((user) => {
+
+    // Signed in
+    // ...
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        var uid = user.uid;
+        // ...
+        window.location.href="https://inventory.rootshhfs.co.uk/home.html"
+      } else {
+        // User is signed out
+        // ...
+      }
     });
+
+  })
+  .catch((error) => {
+    // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // Edge cases
+            if (!email || email.length==0) {
+                document.getElementById('message').innerHTML = '⚠️ Enter your email!'
+                return;
+            }
+            if (!password || password.length==0) {
+                document.getElementById('message').innerHTML = '⚠️ Enter a password!'
+                return;
+            }
+            if (errorCode == 'auth/wrong-password') {
+                alert('Incorrect username, or password.')
+                document.getElementById('password').value='';
+            } else if (errorCode == 'auth/user-disabled') {
+                document.getElementById('message').innerHTML = "⚠️ Account Disabled"
+            } else if (errorCode == 'auth/user-not-found') {
+                document.getElementById('message').innerHTML = "⚠️ This user doesn't exist"
+            } else {
+                document.getElementById('message').innerHTML = "⚠️ " + errorMessage;
+            }
+            console.log(error);
+        });
+
 }
 
 
-function LogOut(){
-  // [START auth_sign_out]
+function ResetPass(){
+  var auth = firebase.auth();
+      var emailAddress = document.getElementById('fb_email').value;
+      auth.sendPasswordResetEmail(emailAddress).then(function() {
+          document.getElementById("message").innerHTML = "✅ Sent"
+      }).catch(function(error) {
+          document.getElementById("message").innerHTML = "⚠️ Error | Contact support if persists"
+      });
+};
+
+
+
+function SignOut(){
   firebase.auth().signOut().then(() => {
-    // Sign-out successful.
-    window.location.href = "https://dia-net.web.app"
-    document.getElementById('NewMessage').innerHTML = "Successfully Signed Out"
-  }).catch((error) => {
-    // An error happened.
-    alert("YOU ARE NOT SIGNED OUT \nContact Support Immediately.")
-  });
-  // [END auth_sign_out]
-}
-
-
-function authStateListener() {
-  // [START auth_state_listener]
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      var uid = user.uid;
-      // ...
-    } else {
-      // User is signed out
-      // ...
-      window.location.href = "https://dia-net.web.app"
-      document.getElementById('NewMessage').innerHTML = "You are not Logged in."
-    }
-  });
-  // [END auth_state_listener]
+  // Sign-out successful.
+  window.location.href="https://inventory.rootshhfs.co.uk"
+  document.getElementById('message').innerHTML = '✅ Signed out successfully'
+}).catch((error) => {
+  // An error happened.
+});
 }

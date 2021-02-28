@@ -14,19 +14,34 @@ p{
 a{
     color: #578AD6
 }
+.float-container {
+}
+
+.float-child {
+    float: left;
+border: inset;
+}
 
 #UsefulLinks{
   border: inset;
   width: 300px;
-  height: 300px;
-  padding-left: 10mm;
+  height: 325px;
+  padding-left: 5mm;
+  text-align: center;
 }
 #Profile{
   border: inset;
   float: right;
   width: 300px;
   height: 150px
-  position: relative; top: -3cm;
+  position: relative;
+}
+#Messages{
+  padding-left: 5mm;
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  overflow: scroll;
 }
 body{
   background-color: #302E2E;
