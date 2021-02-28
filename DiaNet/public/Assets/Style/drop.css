@@ -26,7 +26,7 @@ h5{
 .float-child {
     float: left;
 border: inset;
-  margin-bottom: : 10mm;
+  margin-bottom: : 1mm;
   overflow: hidden;
 }
 
@@ -83,10 +83,62 @@ border: inset;
   margin-left: 13mm;
   border: inset;
 }
+#YouTube{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+}
+#Stores{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 1mm;
+  padding-right: 1mm;
+  text-align: center;
+}
+#RecommendedSupplies{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+}
+#InsulinMan{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+}
+#InsulinType{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+}
+#Links{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+}
 body{
   background-color: #302E2E;
 }
-
+ul{
+  list-style-type: none;
+}
+li{
+  list-style-type: none;
+}
 /* Navbar container */
 .navbar {
   overflow: hidden;
