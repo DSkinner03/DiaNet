@@ -19,12 +19,14 @@ a{
   border: inset;
   width: 300px;
   height: 300px;
+  padding-left: 10mm;
 }
 #Profile{
   border: inset;
   float: right;
   width: 300px;
   height: 150px
+  position: relative; top: -3cm;
 }
 body{
   background-color: #302E2E;
