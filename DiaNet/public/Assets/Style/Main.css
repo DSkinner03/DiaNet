@@ -34,7 +34,17 @@ body{
   text-align: center;
   background-color: #302E2E;
 }
-
+#LoginButton{
+  transition: .2s;
+ padding: 13px 0px;
+ min-width: 275px;
+ border-radius: 5px;
+ border: 1.25px solid rgba(0, 0, 0, 0.425);
+ text-indent: 10px;
+font-size: 17px;
+background-color: #578AD6;
+color: #302E2E;
+}
 
 /* Navbar container */
 .navbar {

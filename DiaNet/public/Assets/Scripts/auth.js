@@ -64,12 +64,22 @@ function ResetPass(){
       });
 };
 
+function NewUser(){
+  var user = firebase.auth().currentUser;
 
+  user.updateProfile({
+
+  }).then(function() {
+    // Update successful.
+  }).catch(function(error) {
+    // An error happened.
+  });
+}
 
 function SignOut(){
   firebase.auth().signOut().then(() => {
   // Sign-out successful.
-  window.location.href="https://inventory.rootshhfs.co.uk"
+  window.location.href="https://dia-net.web.app"
   document.getElementById('message').innerHTML = '✅ Signed out successfully'
 }).catch((error) => {
   // An error happened.

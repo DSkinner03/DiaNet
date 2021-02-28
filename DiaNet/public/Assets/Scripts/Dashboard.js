@@ -1,7 +1,7 @@
 window.onload = function() {
 firebase.auth().onAuthStateChanged(function() {
     const user = firebase.auth().currentUser
-    const profilePicture = document.getElementById("user_avatar")
+    const profilePicture = document.getElementById("NightScoutImg")
     const username = document.getElementById("user_name")
     const email = document.getElementById('user_email')
 
