@@ -11,6 +11,11 @@ h3{
 p{
     color: #578AD6
 }
+
+a{
+    color: #578AD6
+}
+
 input{
   transition: .2s;
  padding: 13px 0px;

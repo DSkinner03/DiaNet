@@ -9,4 +9,14 @@ firebase.auth().onAuthStateChanged(function() {
     username.innerHTML = user.displayName
     email.innerHTML = user.email
 });
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+    window.location.href="https://dia-net.web.app"
+    alert(`You are not signed in. \nPlease sign in again to continue.`)
+  }
+});
 }

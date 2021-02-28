@@ -76,7 +76,7 @@ function NewUser(){
   });
 }
 
-function SignOut(){
+function LogOut(){
   firebase.auth().signOut().then(() => {
   // Sign-out successful.
   window.location.href="https://dia-net.web.app"

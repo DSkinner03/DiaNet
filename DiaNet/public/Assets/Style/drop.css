@@ -81,6 +81,7 @@ border: inset;
   padding-right: 5mm;
   padding-left: 5mm;
   margin-left: 13mm;
+  border: inset;
 }
 body{
   background-color: #302E2E;
