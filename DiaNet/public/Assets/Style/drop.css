@@ -14,34 +14,65 @@ p{
 a{
     color: #578AD6
 }
+h4{
+  color: #578AD6
+}
+h5{
+  color: #578AD6
+}
 .float-container {
 }
 
 .float-child {
     float: left;
 border: inset;
+  margin-bottom: : 10mm;
+  overflow: scroll;
 }
 
 #UsefulLinks{
   border: inset;
   width: 300px;
-  height: 325px;
+  height: 350px;
   padding-left: 5mm;
   text-align: center;
+  margin-right: 10mm;
+  margin-left: 10mm;
 }
 #Profile{
   border: inset;
-  float: right;
   width: 300px;
   height: 150px
   position: relative;
+  padding-right: 5mm;
+  padding-left: 5mm;
+  margin-bottom: 10mm;
 }
 #Messages{
   padding-left: 5mm;
   text-align: center;
   width: 300px;
   height: 350px;
-  overflow: scroll;
+  margin-right: 10mm;
+    padding-right: 5mm;
+}
+#Suggestions{
+  border: inset;
+  width: 300px;
+  height: 150px
+  position: relative;
+  padding-right: 5mm;
+  padding-left: 5mm;
+  margin-bottom: 8mm;
+}
+#Branding{
+  border: inset;
+  width: 300px;
+  height: 150px
+  position: relative;
+  padding-right: 5mm;
+  padding-left: 5mm;
+  margin-bottom: 5mm;
 }
 body{
   background-color: #302E2E;

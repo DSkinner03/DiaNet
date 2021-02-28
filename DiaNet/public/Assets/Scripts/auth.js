@@ -17,7 +17,7 @@ firebase.auth().signInWithEmailAndPassword(email, password)
         // https://firebase.google.com/docs/reference/js/firebase.User
         var uid = user.uid;
         // ...
-        window.location.href="https://inventory.rootshhfs.co.uk/home.html"
+        window.location.href="https://dia-net.web.app/dashboard.html"
       } else {
         // User is signed out
         // ...
