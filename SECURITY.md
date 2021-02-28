@@ -9,6 +9,7 @@ We currently only support the Alpha and Beta testing sites
 | 0.0.0   | :x:                |
 | 0.0.1   | :x:                |
 | 0.0.2   | :white_check_mark: |
+| 0.0.3   | :white_check_mark: |
 
 
 ## Reporting a Vulnerability
