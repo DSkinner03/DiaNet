@@ -11,6 +11,9 @@ h3{
 p{
     color: #578AD6
 }
+a{
+    color: #578AD6
+}
 
 #UsefulLinks{
   border: inset;
@@ -19,9 +22,9 @@ p{
 }
 #Profile{
   border: inset;
-  text-align: right;
+  float: right;
   width: 300px;
-  height: 100px
+  height: 150px
 }
 body{
   background-color: #302E2E;
