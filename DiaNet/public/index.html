@@ -2,8 +2,10 @@
 <html>
   <head>
   <title> Login to DiaNet</title>
+  <script src="/Assets/Scripts/auth.js" charset="utf-8"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://dia-net.web.app/Assets/Scripts/auth.js"></script>
 <link rel="stylesheet" href="https://dia-net.web.app/Assets/Style/Main.css">
 <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -33,11 +35,11 @@
   <br>
   <br>
   <h3>Email Address (required)</h3>
-  <input type="email" id="fb_email" placeholder="example@example.com"></input>
+  <input type="email" id="fb_email" placeholder="example@example.com">
   <h3>Password (required)</h3>
-  <input type="password" id="fb_pass" placeholder="password"></input>
+  <input type="password" id="fb_pass" placeholder="password">
   <br>
-  <input id="LoginButton" type="button" value="Log In" onclick="Login()"></input>
+  <input id="LoginButton" type="button" value="Log In" onclick="LogMin()">
   <br>
   </body>
 </html>

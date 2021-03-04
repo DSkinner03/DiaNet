@@ -2,29 +2,18 @@
 var emailAddress = email
 var message = document.getElementById('message')
 
-function Login(){
+function LogMin(){
   var email = document.getElementById('fb_email').value;
   var password = document.getElementById('fb_pass').value;
-firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((user) => {
 
-    // Signed in
-    // ...
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in
+      window.location.href="/dashboard.html"
+      var user = userCredential.user;
+      // ...
+    })
 
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        var uid = user.uid;
-        // ...
-        window.location.href="https://dia-net.web.app/dashboard.html"
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
-
-  })
   .catch((error) => {
     // Handle Errors here.
             var errorCode = error.code;
@@ -83,76 +72,5 @@ function LogOut(){
   document.getElementById('message').innerHTML = '✅ Signed out successfully'
 }).catch((error) => {
   // An error happened.
-});
-}
-
-function ChangeName(){
-  var user = firebase.auth().currentUser;
-var fb_name = document.getElementById('fb_name').value
-user.updateProfile({
-  displayName: fb_name,
-}).then(function() {
-  // Update successful.
-  alert('Name successfully changed.')
-}).catch(function(error) {
-  // An error happened.
-  alert("Error, please contact support.")
-});
-}
-
-function ChangePass(){
-  var user = firebase.auth().currentUser;
-var newPassword = document.getElementById('fb_pass').value
-
-user.updatePassword(newPassword).then(function() {
-  // Update successful.
-  alert('Password Changes successfully')
-}).catch(function(error) {
-  // An error happened.
-  alert('Error occured, please contact support.')
-});
-}
-
-function CheckStaff(){
-  firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    if (user.email === "service@dia-net.web.app") {
-      window.location.href="https://dia-net.web.app/Staff/Auth/Staff/App/Service/Maintenance"
-    } else{
-      window.location.href="https://dia-net.web.app"
-      alert('You do NOT have permission to view this page')
-    }
-  } else {
-    // No user is signed in.
-    window.location.href="https://dia-net.web.app"
-    alert('You do NOT have permission to view this page')
-  }
-});
-}
-
-
-function ForceReset(){
-  var auth = firebase.auth();
-var emailAddress = document.getElementById('fb_email').value
-
-auth.sendPasswordResetEmail(emailAddress).then(function() {
-  // Email sent.
-  alert('Reset Sent')
-}).catch(function(error) {
-  // An error happened.
-  alert("Error")
-});
-}
-
-function ForceVerify(){
-  var user = document.getElementById('fb_email').value
-
-user.sendEmailVerification(user).then(function() {
-  // Email sent.
-  alert('User Will be verification sent, awaiting user response.')
-}).catch(function(error) {
-  // An error happened.
-  alert('Error')
 });
 }
