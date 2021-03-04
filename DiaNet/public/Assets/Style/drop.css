@@ -47,6 +47,7 @@ border: inset;
   padding-right: 5mm;
   padding-left: 5mm;
   margin-bottom: 10mm;
+  overflow: scroll;
 }
 #Messages{
   padding-left: 5mm;
