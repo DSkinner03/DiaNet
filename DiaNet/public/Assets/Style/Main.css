@@ -15,7 +15,12 @@ p{
 a{
     color: #578AD6
 }
-
+h4{
+  color: #578AD6
+}
+#infoh1{
+  text-align: left;
+}
 
 input{
   transition: .2s;
