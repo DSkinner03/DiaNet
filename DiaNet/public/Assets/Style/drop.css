@@ -38,6 +38,8 @@ border: inset;
   text-align: center;
   margin-right: 10mm;
   /* margin-left: 10mm; */
+  height: auto;
+  width: auto;
 }
 #Profile{
   border: inset;
@@ -91,6 +93,8 @@ border: inset;
   padding-left: 5mm;
   padding-right: 5mm;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 #Stores{
   margin-left: 5mm;
@@ -99,6 +103,8 @@ border: inset;
   padding-left: 1mm;
   padding-right: 1mm;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 #RecommendedSupplies{
   margin-left: 5mm;
@@ -107,6 +113,8 @@ border: inset;
   padding-left: 5mm;
   padding-right: 5mm;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 #InsulinMan{
   margin-left: 5mm;
@@ -115,6 +123,8 @@ border: inset;
   padding-left: 5mm;
   padding-right: 5mm;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 #InsulinType{
   margin-left: 5mm;
@@ -123,6 +133,18 @@ border: inset;
   padding-left: 5mm;
   padding-right: 5mm;
   text-align: center;
+  height: auto;
+  width: auto;
+}
+#Burnout{
+  margin-left: 5mm;
+  margin-right: 5mm;
+  margin-bottom: 5mm;
+  padding-left: 5mm;
+  padding-right: 5mm;
+  text-align: center;
+  height: auto;
+  width: auto;
 }
 #Links{
   margin-left: 5mm;
@@ -130,6 +152,8 @@ border: inset;
   padding-left: 5mm;
   padding-right: 5mm;
   text-align: center;
+  height: auto;
+  width: auto;
 }
 body{
   background-color: #302E2E;
