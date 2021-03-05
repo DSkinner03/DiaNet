@@ -53,17 +53,7 @@ function ResetPass(){
       });
 };
 
-function NewUser(){
-  var user = firebase.auth().currentUser;
 
-  user.updateProfile({
-
-  }).then(function() {
-    // Update successful.
-  }).catch(function(error) {
-    // An error happened.
-  });
-}
 
 function LogOut(){
   firebase.auth().signOut().then(() => {
