@@ -9,7 +9,7 @@ function LogMin(){
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in
-      window.location.href="/dashboard.html"
+      window.location.href="/hub.html"
       var user = userCredential.user;
       // ...
     })

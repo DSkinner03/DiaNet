@@ -16,6 +16,7 @@ a{
     color: #578AD6
 }
 
+
 input{
   transition: .2s;
  padding: 13px 0px;
@@ -38,6 +39,7 @@ color: #302E2E;
 body{
   text-align: center;
   background-color: #302E2E;
+  font-family: 'Open Sans', sans-serif;
 }
 #LoginButton{
   transition: .2s;

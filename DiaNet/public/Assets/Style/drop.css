@@ -33,11 +33,11 @@ border: inset;
 #UsefulLinks{
   border: inset;
   width: 300px;
-  height: 350px;
+  /* height: 350px; */
   padding-left: 5mm;
   text-align: center;
   margin-right: 10mm;
-  margin-left: 10mm;
+  /* margin-left: 10mm; */
 }
 #Profile{
   border: inset;
@@ -133,6 +133,7 @@ border: inset;
 }
 body{
   background-color: #302E2E;
+  font-family: 'Open Sans', sans-serif;
 }
 ul{
   list-style-type: none;
