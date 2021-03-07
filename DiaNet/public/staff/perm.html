@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://dia-net.web.app/Assets/Style/Main.css">
+  <script src="https://dia-net.web.app/Assets/auth.js" charset="utf-8"></script>
+    <script src="https://dia-net.web.app/Assets/staff.js" charset="utf-8"></script>
+    <title>DiaNet Staff</title>
+    <script type="text/javascript">
+      window.onload= function(){
+        firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    // ...
+    alert("You have passed the authentication gateway.")
+  } else {
+    // User is signed out
+    // ...
+    alert("You have failed the authentication gateway. \nYou will now be re-directed to the main login page.")
+    window.location.href="https://dia-net.web.app"
+    document.getElementById('message').innerHTML = "You have failed the staff authentication gateway."
+
+
+
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var user = firebase.auth().currentUser;
+
+if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: " + profile.providerId);
+    console.log("  Provider-specific UID: " + profile.uid);
+    console.log("  Name: " + profile.displayName);
+    console.log("  Email: " + profile.email);
+    console.log("  Photo URL: " + profile.photoURL);
+  });
+}
+  } else {
+    // No user is signed in.
+  }
+});
+  }
+});
+      }
+    </script>
+  </head>
+  <body>
+<h1>DiaNet Staff</h1>
+<br>
+<br>
+<h2>Account Look-up</h2>
+  </body>
+</html>

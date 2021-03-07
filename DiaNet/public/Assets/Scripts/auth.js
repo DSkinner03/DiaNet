@@ -64,3 +64,29 @@ function LogOut(){
   // An error happened.
 });
 }
+
+
+
+function StaffLogin() {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+var Pin = prompt("Please enter your PIN number");
+if (Pin === "0335") {
+  window.location.href = "https://dia-net.web.app/staff/perm.html"
+}
+else {
+  alert("You do not have access to the staff site \nYou will now be re-directed to the main login.")
+  window.location.href="https://dia-net.web.app"
+}
+    var user = userCredential.user;
+    // ...
+  } )
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+}
+
+=
+}
