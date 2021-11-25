@@ -1,21 +1,24 @@
 # DiaNet
-DiaNet acts as an online hub that allows you to visit online stores, view resources and information, link NightScout and basically act as a gateway to all your online diabetic needs
-
 
 Please note that this is not a medical website, we do not take your money or ask for any payment details, this website also requires approved access, meaning that you can only sign in if you have an account.
 
+## DiaNet Will:
 
-# **Creating an account**
-Unfortunately, we are not currently accepting account creations, if you have been invited to test, you will have had the signup process sent to your email.
+   - provide support to diabetics
+   - provide digital services to diabetics and healthcare professionals
+   - provide tips and tricks to diabetics
+   - Provide information and education to non-diabetics
 
-# **Deleting an account**
-You can request for your account to be deleted and all your information removed from our system by simply going to the support dropdown and pressing Account deletion request
+## Our Vision
+DiaNet will give people the confidence, skills and knowledge needed to thrive in an ever-changing world.
+We also want to show what diabetes is really like, in contrast to what people think
 
-# **Account Management** 
-You can manage your account including details of your account under the "Manage" Drop down on the top navigation bar, then the "Manage Account" button.
 
-# **The Hub**
-The hub acts as a central location for you to access different resources, websites, and other useful tools that is a more detailed, text heavy, less personal version of the dashboard.
+## News and guides
+We want to be a source for news for diabetics and also to provide guides and comparisons for example; choosing a CGM or a pump.
+Or for Approved Healthcare Providers to share news, information or resources with their patients
 
-# **Dashboard**
-The Dashboard acts as a quick way to see your NightScout, useful links, account information and messages.
+  
+## Communities
+We also hope to give people with Diabetes a place to chat, whether that's about diabetes or not ¯\_(ツ)_/¯
+We hope this is available over multiple platforms including Discord, our website and (maybe in the future) a mobile app
